@@ -125,8 +125,10 @@ def play(word):
         while is_in_guessed_list:
             guess = input("TAKE A GUESS: ").strip().upper()
 
-            if guess in guessed_letters:
-                print("YOU CANNOT CHOOSE THIS LETTER.")
+            if not guess.isalpha():
+                print("YOU MUST ENTER A LETTER.")
+            elif guess in guessed_letters:
+                print("YOU HAVE ALREADY GUESSED THIS LETTER.")
             else:
                 is_in_guessed_list = False
                 guessed_letters.append(guess)
