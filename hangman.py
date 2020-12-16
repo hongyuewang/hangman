@@ -156,7 +156,7 @@ def play(word):
         if choice == "Y":
             play(get_random_word())
         elif choice == "N":
-            break
+            exit()
         else:
             print("PLEASE ENTER A VALID INPUT (Y/N): ")
 
